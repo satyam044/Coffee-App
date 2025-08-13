@@ -1,3 +1,4 @@
+import 'package:coffee_app/widgets/items_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -94,6 +95,7 @@ class _HomeScreenState extends State<HomeScreen>
                 controller: _tabController,
                 labelColor: Color.fromARGB(255, 200, 105, 71),
                 unselectedLabelColor: Color.fromARGB(192, 255, 255, 255),
+                isScrollable: true,
                 indicator: UnderlineTabIndicator(
                   borderSide: BorderSide(
                     width: 3,
@@ -101,19 +103,21 @@ class _HomeScreenState extends State<HomeScreen>
                   ),
                   insets: EdgeInsets.symmetric(horizontal: 16),
                 ),
+                labelStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+                labelPadding: EdgeInsets.symmetric(horizontal: 20),
                 tabs: [
                 Tab(text: "Hot Coffee",),
-                Tab(text: "Hot Coffee",),
-                Tab(text: "Hot Coffee",),
-                Tab(text: "Hot Coffee",),
+                Tab(text: "Cold Coffee",),
+                Tab(text: "Cappuiccino",),
+                Tab(text: "Americano",),
               ]),
               SizedBox(height: 10,),
               Center(
                 child: [
-                  Container(color: Colors.red,),
-                  Container(color: Colors.red,),
-                  Container(color: Colors.red,),
-                  Container(color: Colors.red,),
+                  ItemsWidget(),
+                  ItemsWidget(),
+                  ItemsWidget(),
+                  ItemsWidget(),
                 ][_tabController.index],
               )
             ],
