@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class ItemsWidget extends StatelessWidget {
   ItemsWidget({super.key});
 
-  List img = ["", "", "", ""];
+  final List<String> img = ["blackcoffee", "coldcoffee", "espresso", "latte"];
 
   @override
   Widget build(BuildContext context) {
@@ -65,6 +65,27 @@ class ItemsWidget extends StatelessWidget {
                       ],
                     ),
                   ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "\$30",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.white,
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 200, 105, 71),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Icon(Icons.add, size: 20, color: Colors.white),
+                    ),
+                  ],
                 ),
               ],
             ),
