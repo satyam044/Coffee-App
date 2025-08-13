@@ -27,17 +27,17 @@ class HomeBottomBar extends StatelessWidget {
             size: 35,
           ),
           Icon(
-            Icons.shopping_cart_outlined,
+            Icons.favorite_outline,
             color: Colors.white,
             size: 35,
           ),
           Icon(
-            Icons.notifications,
+            Icons.notifications_outlined,
             color: Colors.white,
             size: 35,
           ),
           Icon(
-            Icons.person,
+            Icons.person_outline,
             color: Colors.white,
             size: 35,
           ),
