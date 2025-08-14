@@ -122,7 +122,7 @@ class ItemScreen extends StatelessWidget {
                               color: Colors.white,
                             ),
                           ),
-                          SizedBox(width: 10,),
+                          SizedBox(width: 10),
                           Text(
                             "60 ml",
                             style: TextStyle(
@@ -133,48 +133,47 @@ class ItemScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(height: 30,),
-                      Container(
-                        width: MediaQuery.of(context).size.width,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Container(
-                              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 50),
-                              decoration: BoxDecoration(
-                                color: Color.fromARGB(116, 28, 41, 1),
-                                borderRadius: BorderRadius.circular(18),
-                              ),
-                              child: Text(
-                                "Add to Cart",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                  letterSpacing: 1,
-                                ),
-                              ),
-                            ),
-                            Container(
-                              padding: EdgeInsets.all(20),
-                              decoration: BoxDecoration(
-                                color: Color.fromARGB(116, 239, 166, 57),
-                                borderRadius: BorderRadius.circular(18),
-                              ),
-                              child: Icon(
-                                Icons.favorite_outline,
-                                color: Colors.white,
-                              )
-                            )
-                          ],
-                        ),
-                      )
+                      SizedBox(height: 30),
                     ],
                   ),
                 ),
               ],
             ),
           ),
+        ),
+      ),
+      bottomNavigationBar: Container(
+        width: MediaQuery.of(context).size.width,
+        decoration: BoxDecoration(color: Color.fromARGB(116, 28, 41, 1)),
+        padding: EdgeInsets.all(10),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 50),
+              decoration: BoxDecoration(
+                color: Color.fromARGB(116, 239, 166, 57),
+                borderRadius: BorderRadius.circular(18),
+              ),
+              child: Text(
+                "Add to Cart",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1,
+                ),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: Color.fromARGB(116, 239, 166, 57),
+                borderRadius: BorderRadius.circular(18),
+              ),
+              child: Icon(Icons.favorite_outline, color: Colors.white),
+            ),
+          ],
         ),
       ),
     );
